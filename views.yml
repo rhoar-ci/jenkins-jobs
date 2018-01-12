@@ -1,0 +1,8 @@
+- view:
+    name: ci-pr
+    view-type: list
+    regex: "^ci-pr-.*"
+- view:
+    name: ci-master
+    view-type: list
+    regex: "^ci-master-.*"

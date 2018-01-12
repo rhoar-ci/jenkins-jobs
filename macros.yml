@@ -1,0 +1,72 @@
+- property:
+    name: keep-10-builds
+    properties:
+    - build-discarder:
+        num-to-keep: 10
+
+- property:
+    name: github-url
+    properties:
+    - github:
+        url: "https://github.com/{github-org}/{github-repo}"
+
+- scm:
+    name: github-pr
+    scm:
+    - git:
+        url: "https://github.com/{github-org}/{github-repo}.git"
+        refspec: "+refs/pull/*:refs/remotes/origin/pr/*"
+        branches:
+        - "$sha1"
+        skip-tag: true
+
+- scm:
+    name: github
+    scm:
+    - git:
+        url: "https://github.com/{github-org}/{github-repo}.git"
+        branches:
+        - master
+        skip-tag: true
+
+- trigger:
+    name: github-pr
+    triggers:
+    - github-pull-request:
+        github-hooks: true
+        org-list:
+        - "{github-org}"
+        allow-whitelist-orgs-as-admins: true
+        auth-id: rhoar-bot-github-token
+        status-context: rhoar-bot
+        status-url: "http://rourka.op.redhat.com/console-text/$JOB_BASE_NAME-$BUILD_NUMBER"
+        cancel-builds-on-update: true
+
+- wrapper:
+    name: timeout-1h
+    wrappers:
+    - timeout:
+        timeout: 60
+
+- builder:
+    name: booster-basic
+    builders:
+    - shell: |
+        mvn clean verify -B
+        mvn clean verify -B -Popenshift,openshift-it
+
+- builder:
+    name: booster-sso
+    builders:
+    - shell: |
+        oc apply -f service.sso.yaml
+        SSO_URL=$(oc get route secure-sso -o jsonpath='https://{.spec.host}/auth')
+        mvn clean verify -B
+        mvn clean verify -B -Popenshift,openshift-it -DSSO_AUTH_SERVER_URL=${SSO_URL}
+        oc delete -f service.sso.yaml
+
+- publisher:
+    name: junit-archive
+    publishers:
+    - junit:
+        results: "**/target/*-reports/*.xml"
