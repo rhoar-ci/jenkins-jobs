@@ -43,6 +43,12 @@
         cancel-builds-on-update: true
 
 - wrapper:
+    name: timeout-10min
+    wrappers:
+    - timeout:
+        timeout: 10
+
+- wrapper:
     name: timeout-1h
     wrappers:
     - timeout:

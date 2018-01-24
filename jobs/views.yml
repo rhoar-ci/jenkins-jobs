@@ -6,3 +6,7 @@
     name: ci-master
     view-type: list
     regex: "^ci-master-.*"
+- view:
+    name: infra
+    view-type: list
+    regex: "^infra-.*"

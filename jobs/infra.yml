@@ -1,0 +1,42 @@
+- job:
+    name: infra-jobs-pr
+    project-type: freestyle
+    node: rourka-jjb
+    properties:
+    - keep-10-builds
+    - github-url:
+        github-org: rhoar-ci
+        github-repo: jenkins-jobs
+    scm:
+    - github-pr:
+        github-org: rhoar-ci
+        github-repo: jenkins-jobs
+    triggers:
+    - github-pr:
+        github-org: rhoar-ci
+    wrappers:
+    - timeout-10min
+    builders:
+    - shell: |
+        jjb test jobs
+
+- job:
+    name: infra-jobs-master
+    project-type: freestyle
+    node: rourka-jjb
+    properties:
+    - keep-10-builds
+    - github-url:
+        github-org: rhoar-ci
+        github-repo: jenkins-jobs
+    scm:
+    - github:
+        github-org: rhoar-ci
+        github-repo: jenkins-jobs
+    triggers:
+    - github
+    wrappers:
+    - timeout-10min
+    builders:
+    - shell: |
+        jjb update jobs
