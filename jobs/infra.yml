@@ -40,3 +40,46 @@
     builders:
     - shell: |
         jjb update jobs
+
+- job:
+    name: infra-dashboard-pr
+    project-type: freestyle
+    node: rourka-maven
+    properties:
+    - keep-10-builds
+    - github-url:
+        github-org: rhoar-ci
+        github-repo: dashboard
+    scm:
+    - github-pr:
+        github-org: rhoar-ci
+        github-repo: dashboard
+    triggers:
+    - github-pr:
+        github-org: rhoar-ci
+    wrappers:
+    - timeout-10min
+    builders:
+    - shell: |
+        mvn clean verify
+
+- job:
+    name: infra-dashboard-master
+    project-type: freestyle
+    node: rourka-maven
+    properties:
+    - keep-10-builds
+    - github-url:
+        github-org: rhoar-ci
+        github-repo: dashboard
+    scm:
+    - github:
+        github-org: rhoar-ci
+        github-repo: dashboard
+    triggers:
+    - github
+    wrappers:
+    - timeout-10min
+    builders:
+    - shell: |
+        mvn clean fabric8:deploy
