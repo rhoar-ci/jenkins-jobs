@@ -1,7 +1,7 @@
 - job:
     name: infra-jobs-pr
     project-type: freestyle
-    node: rourka-jjb
+    node: jjb
     properties:
     - keep-10-builds
     - github-url:
@@ -23,7 +23,7 @@
 - job:
     name: infra-jobs-master
     project-type: freestyle
-    node: rourka-jjb
+    node: jjb
     properties:
     - keep-10-builds
     - github-url:
@@ -44,7 +44,7 @@
 - job:
     name: infra-dashboard-pr
     project-type: freestyle
-    node: rourka-maven
+    node: maven
     properties:
     - keep-10-builds
     - github-url:
@@ -66,7 +66,7 @@
 - job:
     name: infra-dashboard-master
     project-type: freestyle
-    node: rourka-maven
+    node: maven
     properties:
     - keep-10-builds
     - github-url:

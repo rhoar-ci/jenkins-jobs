@@ -1,7 +1,7 @@
 - job-template:
     name: ci-pr-fmp-{github-repo}
     project-type: freestyle
-    node: rourka-maven
+    node: maven
     properties:
     - keep-10-builds
     - github-url:
@@ -24,7 +24,7 @@
     name: ci-master-fmp-{github-repo}
     description: '{{"cluster": "{ci-cluster}", "description": "{ci-description}", "type": "{ci-type}"}}'
     project-type: freestyle
-    node: rourka-maven
+    node: maven
     properties:
     - keep-10-builds
     - github-url:
