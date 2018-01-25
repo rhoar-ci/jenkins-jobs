@@ -39,7 +39,7 @@
         allow-whitelist-orgs-as-admins: true
         auth-id: rhoar-bot-github-token
         status-context: rhoar-bot
-        status-url: "http://rourka.op.redhat.com/console-text/$JOB_BASE_NAME-$BUILD_NUMBER"
+        status-url: "http://rourka.op.redhat.com/console-text/$JOB_BASE_NAME/$BUILD_NUMBER"
         cancel-builds-on-update: true
 
 - wrapper:
