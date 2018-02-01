@@ -7,6 +7,10 @@
     view-type: list
     regex: "^ci-master-.*"
 - view:
+    name: oso-starter-ca-central-1
+    view-type: list
+    regex: "^oso-starter-ca-central-1-.*"
+- view:
     name: infra
     view-type: list
     regex: "^infra-.*"
