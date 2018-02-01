@@ -17,6 +17,8 @@
     wrappers:
     - timeout-1h
     builders:
+    - setup-oc:
+        openshift-cluster: local
     - '{builder}'
     publishers:
     - junit-archive
@@ -40,6 +42,8 @@
     wrappers:
     - timeout-1h
     builders:
+    - setup-oc:
+        openshift-cluster: local
     - '{builder}'
     publishers:
     - junit-archive

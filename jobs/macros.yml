@@ -55,6 +55,18 @@
         timeout: 60
 
 - builder:
+    name: setup-oc
+    builders:
+    - inject:
+        properties-content: |
+          OPENSHIFT_CLUSTER={openshift-cluster}
+    - shell:
+        !include-raw-escape: "scripts/setup-oc.sh"
+    - inject:
+        properties-content: |
+          PATH=$WORKSPACE/custom-bin:$PATH
+
+- builder:
     name: booster-basic
     builders:
     - shell: |
