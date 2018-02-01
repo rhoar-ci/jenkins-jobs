@@ -20,6 +20,7 @@
     - '{builder}'
     publishers:
     - junit-archive
+    - workspace-cleanup
 - job-template:
     name: ci-master-fmp-{github-repo}
     description: '{{"cluster": "CI cluster", "description": "{ci-description}", "type": "{ci-type}"}}'
@@ -42,6 +43,7 @@
     - '{builder}'
     publishers:
     - junit-archive
+    - workspace-cleanup
 
 - project:
     name: ci-fmp-wfswarm-rest-http
