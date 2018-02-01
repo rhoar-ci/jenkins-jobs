@@ -22,7 +22,7 @@
     - junit-archive
 - job-template:
     name: ci-master-fmp-{github-repo}
-    description: '{{"cluster": "{ci-cluster}", "description": "{ci-description}", "type": "{ci-type}"}}'
+    description: '{{"cluster": "CI cluster", "description": "{ci-description}", "type": "{ci-type}"}}'
     project-type: freestyle
     node: maven
     properties:
@@ -44,66 +44,60 @@
     - junit-archive
 
 - project:
-    name: ci-pr-fmp-wfswarm-rest-http
+    name: ci-fmp-wfswarm-rest-http
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-rest-http
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'WildFly Swarm | 100: HTTP API'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-wfswarm-rest-http-crud
+    name: ci-fmp-wfswarm-rest-http-crud
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-rest-http-crud
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'WildFly Swarm | 101: CRUD'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-wfswarm-configmap
+    name: ci-fmp-wfswarm-configmap
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-configmap
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'WildFly Swarm | 102: ConfigMap'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-wfswarm-rest-http-secured
+    name: ci-fmp-wfswarm-rest-http-secured
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-rest-http-secured
     builder: booster-sso
-    ci-cluster: 'CI cluster'
     ci-description: 'WildFly Swarm | 103: SSO'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-wfswarm-health-check
+    name: ci-fmp-wfswarm-health-check
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-health-check
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'WildFly Swarm | 104: Health Check'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-wfswarm-circuit-breaker
+    name: ci-fmp-wfswarm-circuit-breaker
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-circuit-breaker
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'WildFly Swarm | 106: Circuit Breaker'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
@@ -111,66 +105,60 @@
     - ci-master-fmp-{github-repo}
 
 - project:
-    name: ci-pr-fmp-vertx-http-booster
+    name: ci-fmp-vertx-http-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-http-booster
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'Vert.x | 100: HTTP API'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-vertx-crud-booster
+    name: ci-fmp-vertx-crud-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-crud-booster
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'Vert.x | 101: CRUD'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-vertx-configmap-booster
+    name: ci-fmp-vertx-configmap-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-configmap-booster
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'Vert.x | 102: ConfigMap'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-vertx-secured-http-booster
+    name: ci-fmp-vertx-secured-http-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-secured-http-booster
     builder: booster-sso
-    ci-cluster: 'CI cluster'
     ci-description: 'Vert.x | 103: SSO'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-vertx-health-checks-booster
+    name: ci-fmp-vertx-health-checks-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-health-checks-booster
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'Vert.x | 104: Health Check'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-vertx-circuit-breaker-booster
+    name: ci-fmp-vertx-circuit-breaker-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-circuit-breaker-booster
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'Vert.x | 106: Circuit Breaker'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
@@ -178,66 +166,60 @@
     - ci-master-fmp-{github-repo}
 
 - project:
-    name: ci-pr-fmp-spring-boot-http-booster
+    name: ci-fmp-spring-boot-http-booster
     github-org: snowdrop
     github-repo: spring-boot-http-booster
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'Spring Boot | 100: HTTP API'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-spring-boot-crud-booster
+    name: ci-fmp-spring-boot-crud-booster
     github-org: snowdrop
     github-repo: spring-boot-crud-booster
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'Spring Boot | 101: CRUD'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-spring-boot-configmap-booster
+    name: ci-fmp-spring-boot-configmap-booster
     github-org: snowdrop
     github-repo: spring-boot-configmap-booster
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'Spring Boot | 102: ConfigMap'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-spring-boot-http-secured-booster
+    name: ci-fmp-spring-boot-http-secured-booster
     github-org: snowdrop
     github-repo: spring-boot-http-secured-booster
     builder: booster-sso
-    ci-cluster: 'CI cluster'
     ci-description: 'Spring Boot | 103: SSO'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-spring-boot-health-check-booster
+    name: ci-fmp-spring-boot-health-check-booster
     github-org: snowdrop
     github-repo: spring-boot-health-check-booster
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'Spring Boot | 104: Health Check'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-spring-boot-circuit-breaker-booster
+    name: ci-fmp-spring-boot-circuit-breaker-booster
     github-org: snowdrop
     github-repo: spring-boot-circuit-breaker-booster
     builder: booster-basic
-    ci-cluster: 'CI cluster'
     ci-description: 'Spring Boot | 106: Circuit Breaker'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
