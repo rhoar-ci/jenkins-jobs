@@ -50,7 +50,7 @@
     - workspace-cleanup
 
 - project:
-    name: ci-pr-fmp-wfswarm-rest-http
+    name: ci-fmp-wfswarm-rest-http
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-rest-http
     builder: booster-basic
@@ -60,7 +60,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-wfswarm-rest-http-crud
+    name: ci-fmp-wfswarm-rest-http-crud
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-rest-http-crud
     builder: booster-basic
@@ -70,7 +70,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-wfswarm-configmap
+    name: ci-fmp-wfswarm-configmap
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-configmap
     builder: booster-basic
@@ -80,7 +80,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-wfswarm-rest-http-secured
+    name: ci-fmp-wfswarm-rest-http-secured
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-rest-http-secured
     builder: booster-sso
@@ -90,7 +90,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-wfswarm-health-check
+    name: ci-fmp-wfswarm-health-check
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-health-check
     builder: booster-basic
@@ -100,7 +100,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-wfswarm-circuit-breaker
+    name: ci-fmp-wfswarm-circuit-breaker
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-circuit-breaker
     builder: booster-basic
@@ -111,7 +111,7 @@
     - ci-master-fmp-{github-repo}
 
 - project:
-    name: ci-pr-fmp-vertx-http-booster
+    name: ci-fmp-vertx-http-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-http-booster
     builder: booster-basic
@@ -121,7 +121,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-vertx-crud-booster
+    name: ci-fmp-vertx-crud-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-crud-booster
     builder: booster-basic
@@ -131,7 +131,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-vertx-configmap-booster
+    name: ci-fmp-vertx-configmap-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-configmap-booster
     builder: booster-basic
@@ -141,7 +141,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-vertx-secured-http-booster
+    name: ci-fmp-vertx-secured-http-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-secured-http-booster
     builder: booster-sso
@@ -151,7 +151,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-vertx-health-checks-booster
+    name: ci-fmp-vertx-health-checks-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-health-checks-booster
     builder: booster-basic
@@ -161,7 +161,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-vertx-circuit-breaker-booster
+    name: ci-fmp-vertx-circuit-breaker-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-circuit-breaker-booster
     builder: booster-basic
@@ -172,7 +172,7 @@
     - ci-master-fmp-{github-repo}
 
 - project:
-    name: ci-pr-fmp-spring-boot-http-booster
+    name: ci-fmp-spring-boot-http-booster
     github-org: snowdrop
     github-repo: spring-boot-http-booster
     builder: booster-basic
@@ -182,7 +182,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-spring-boot-crud-booster
+    name: ci-fmp-spring-boot-crud-booster
     github-org: snowdrop
     github-repo: spring-boot-crud-booster
     builder: booster-basic
@@ -192,7 +192,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-spring-boot-configmap-booster
+    name: ci-fmp-spring-boot-configmap-booster
     github-org: snowdrop
     github-repo: spring-boot-configmap-booster
     builder: booster-basic
@@ -202,7 +202,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-spring-boot-http-secured-booster
+    name: ci-fmp-spring-boot-http-secured-booster
     github-org: snowdrop
     github-repo: spring-boot-http-secured-booster
     builder: booster-sso
@@ -212,7 +212,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-spring-boot-health-check-booster
+    name: ci-fmp-spring-boot-health-check-booster
     github-org: snowdrop
     github-repo: spring-boot-health-check-booster
     builder: booster-basic
@@ -222,7 +222,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-pr-fmp-spring-boot-circuit-breaker-booster
+    name: ci-fmp-spring-boot-circuit-breaker-booster
     github-org: snowdrop
     github-repo: spring-boot-circuit-breaker-booster
     builder: booster-basic
