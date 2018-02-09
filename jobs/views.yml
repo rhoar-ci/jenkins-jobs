@@ -11,6 +11,10 @@
     view-type: list
     regex: "^oso-starter-ca-central-1-.*"
 - view:
+    name: oso-starter-us-west-1
+    view-type: list
+    regex: "^oso-starter-us-west-1-.*"
+- view:
     name: infra
     view-type: list
     regex: "^infra-.*"
