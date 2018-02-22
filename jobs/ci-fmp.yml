@@ -18,7 +18,7 @@
     - timeout-1h
     builders:
     - setup-oc:
-        openshift-cluster: local
+        openshift-cluster: local-ci-pr
     - '{builder}'
     publishers:
     - junit-archive
@@ -43,7 +43,7 @@
     - timeout-1h
     builders:
     - setup-oc:
-        openshift-cluster: local
+        openshift-cluster: local-ci-master
     - '{builder}'
     publishers:
     - junit-archive
