@@ -50,4 +50,9 @@ if [[ "$OPENSHIFT_CLUSTER" =~ "local" && $(grep -q fake /my-secrets/clusters/$OP
 else
   TOKEN=$(cat /my-secrets/clusters/$OPENSHIFT_CLUSTER-token)
 fi
-$WORKSPACE/custom-bin/oc login $API_SERVER --token $TOKEN
+
+PARAMS=''
+if [[ "$OPENSHIFT_CLUSTER" =~ "local" ]] ; then
+  PARAMS='--insecure-skip-tls-verify=true'
+fi
+$WORKSPACE/custom-bin/oc login $API_SERVER --token $TOKEN $PARAMS
