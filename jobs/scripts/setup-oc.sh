@@ -53,6 +53,6 @@ fi
 
 PARAMS=''
 if [[ "$OPENSHIFT_CLUSTER" =~ "local" ]] ; then
-  PARAMS='--insecure-skip-tls-verify=true'
+  PARAMS='--certificate-authority=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt'
 fi
 $WORKSPACE/custom-bin/oc login $API_SERVER --token $TOKEN $PARAMS
