@@ -10,6 +10,15 @@
     - github:
         url: "https://github.com/{github-org}/{github-repo}"
 
+- property:
+    name: build-block
+    properties:
+    - build-blocker:
+        use-build-blocker: true
+        blocking-jobs:
+        - '{job-prefix}.*'
+        block-level: GLOBAL
+        queue-scanning: DISABLED
 - scm:
     name: github-pr
     scm:

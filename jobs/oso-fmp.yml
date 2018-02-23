@@ -8,6 +8,8 @@
     - github-url:
         github-org: '{github-org}'
         github-repo: '{github-repo}'
+    - build-block:
+        job-prefix: oso-{openshift-cluster}
     scm:
     - github:
         github-org: '{github-org}'
