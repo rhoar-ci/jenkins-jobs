@@ -44,7 +44,7 @@ else
 fi
 rm oc.tar.gz
 
-if [[ "$OPENSHIFT_CLUSTER" =~ "local" && $(grep -q fake /my-secrets/clusters/$OPENSHIFT_CLUSTER-token) ]] ; then
+if [[ "$OPENSHIFT_CLUSTER" =~ "local" ]] && grep -q fake /my-secrets/clusters/$OPENSHIFT_CLUSTER-token ; then
   # just for development to ease managing secrets; in prod, this branch should never be taken
   TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)
 else
