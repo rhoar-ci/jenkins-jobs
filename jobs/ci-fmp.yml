@@ -21,6 +21,7 @@
     builders:
     - setup-oc:
         openshift-cluster: local-ci-pr
+    - clean-project
     - '{builder}'
     publishers:
     - junit-archive
@@ -48,6 +49,7 @@
     builders:
     - setup-oc:
         openshift-cluster: local-ci-master
+    - clean-project
     - '{builder}'
     publishers:
     - junit-archive

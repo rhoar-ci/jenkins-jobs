@@ -75,6 +75,13 @@
         properties-content: |
           PATH=$WORKSPACE/custom-bin:$PATH
 
+# must not be used before `setup-oc`
+- builder:
+    name: clean-project
+    builders:
+    - shell:
+        !include-raw-escape: "scripts/clean-project.sh"
+
 - builder:
     name: booster-basic
     builders:

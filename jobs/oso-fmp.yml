@@ -21,6 +21,7 @@
     builders:
     - setup-oc:
         openshift-cluster: '{openshift-cluster}'
+    - clean-project
     - '{builder}'
     publishers:
     - junit-archive
