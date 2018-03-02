@@ -83,3 +83,26 @@
     builders:
     - shell: |
         mvn clean fabric8:deploy
+
+- job:
+    name: infra-e2e-tests-pr
+    project-type: freestyle
+    node: nodejs
+    properties:
+    - keep-10-builds
+    - github-url:
+        github-org: rhoar-ci
+        github-repo: e2e-tests
+    scm:
+    - github-pr:
+        github-org: rhoar-ci
+        github-repo: e2e-tests
+    triggers:
+    - github-pr:
+        github-org: rhoar-ci
+    wrappers:
+    - timeout-10min
+    builders:
+    - shell: |
+        npm install
+        npm run check
