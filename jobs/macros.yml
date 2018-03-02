@@ -94,6 +94,8 @@
     builders:
     - shell: |
         oc apply -f service.sso.yaml
+        # workaround for https://issues.jboss.org/browse/CLOUD-2195
+        oc volume dc/sso --add --type=emptyDir --mount-path /opt/eap/standalone/configuration/standalone_xml_history
         SSO_URL=$(oc get route secure-sso -o jsonpath='https://{.spec.host}/auth')
         mvn clean verify -B
         mvn clean verify -B -Popenshift,openshift-it -DSSO_AUTH_SERVER_URL=${SSO_URL}
