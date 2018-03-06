@@ -94,8 +94,6 @@
     builders:
     - shell: |
         oc apply -f service.sso.yaml
-        # workaround for https://issues.jboss.org/browse/CLOUD-2195
-        oc volume dc/sso --add --type=emptyDir --mount-path /opt/eap/standalone/configuration/standalone_xml_history
         # don't let Vert.x test deploy/undeploy SSO on its own, we can do better
         sed -i '/COMMAND_EXECUTOR.execCommand/d' src/test/java/io/openshift/booster/SecuredBoosterIT.java || true
         SSO_URL=$(oc get route secure-sso -o jsonpath='https://{.spec.host}/auth')
