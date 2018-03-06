@@ -38,7 +38,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-wfswarm-rest-http-crud
     github-org: wildfly-swarm-openshiftio-boosters
@@ -50,7 +54,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-wfswarm-configmap
     github-org: wildfly-swarm-openshiftio-boosters
@@ -62,7 +70,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-wfswarm-rest-http-secured
     github-org: wildfly-swarm-openshiftio-boosters
@@ -74,7 +86,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-wfswarm-health-check
     github-org: wildfly-swarm-openshiftio-boosters
@@ -86,7 +102,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-wfswarm-circuit-breaker
     github-org: wildfly-swarm-openshiftio-boosters
@@ -98,7 +118,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 
 - project:
     name: oso-fmp-vertx-http-booster
@@ -111,7 +135,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-vertx-crud-booster
     github-org: openshiftio-vertx-boosters
@@ -123,7 +151,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-vertx-configmap-booster
     github-org: openshiftio-vertx-boosters
@@ -135,7 +167,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-vertx-secured-http-booster
     github-org: openshiftio-vertx-boosters
@@ -147,7 +183,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-vertx-health-checks-booster
     github-org: openshiftio-vertx-boosters
@@ -159,7 +199,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-vertx-circuit-breaker-booster
     github-org: openshiftio-vertx-boosters
@@ -171,7 +215,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 
 - project:
     name: oso-fmp-spring-boot-http-booster
@@ -184,7 +232,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-spring-boot-crud-booster
     github-org: snowdrop
@@ -196,7 +248,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-spring-boot-configmap-booster
     github-org: snowdrop
@@ -208,7 +264,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-spring-boot-http-secured-booster
     github-org: snowdrop
@@ -220,7 +280,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-spring-boot-health-check-booster
     github-org: snowdrop
@@ -232,7 +296,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 - project:
     name: oso-fmp-spring-boot-circuit-breaker-booster
     github-org: snowdrop
@@ -244,4 +312,8 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
