@@ -98,6 +98,12 @@
     - shell:
         !include-raw: "scripts/fmp-booster-sso.sh"
 
+- builder:
+    name: s2i-booster-basic
+    builders:
+    - shell:
+        !include-raw: "scripts/s2i-booster-basic.sh"
+
 - publisher:
     name: junit-archive
     publishers:
