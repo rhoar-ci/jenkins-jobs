@@ -22,7 +22,7 @@
     - setup-oc:
         openshift-cluster: '{openshift-cluster}'
     - clean-project
-    - '{builder}'
+    - 'fmp-{builder}'
     publishers:
     - junit-archive
     - workspace-cleanup

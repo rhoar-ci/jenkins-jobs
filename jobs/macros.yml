@@ -84,26 +84,19 @@
     name: clean-project
     builders:
     - shell:
-        !include-raw-escape: "scripts/clean-project.sh"
+        !include-raw: "scripts/clean-project.sh"
 
 - builder:
-    name: booster-basic
+    name: fmp-booster-basic
     builders:
-    - shell: |
-        mvn clean verify -B
-        mvn clean verify -B -Popenshift,openshift-it
+    - shell:
+        !include-raw: "scripts/fmp-booster-basic.sh"
 
 - builder:
-    name: booster-sso
+    name: fmp-booster-sso
     builders:
-    - shell: |
-        oc apply -f service.sso.yaml
-        # don't let Vert.x test deploy/undeploy SSO on its own, we can do better
-        sed -i '/COMMAND_EXECUTOR.execCommand/d' src/test/java/io/openshift/booster/SecuredBoosterIT.java || true
-        SSO_URL=$(oc get route secure-sso -o jsonpath='https://{.spec.host}/auth')
-        mvn clean verify -B
-        mvn clean verify -B -Popenshift,openshift-it -DSSO_AUTH_SERVER_URL=${SSO_URL}
-        oc delete -f service.sso.yaml
+    - shell:
+        !include-raw: "scripts/fmp-booster-sso.sh"
 
 - publisher:
     name: junit-archive
