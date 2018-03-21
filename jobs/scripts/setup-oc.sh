@@ -19,7 +19,7 @@ case "$OPENSHIFT_GIT_VERSION" in
     OC_URL=https://github.com/openshift/origin/releases/download/v3.6.1/openshift-origin-client-tools-v3.6.1-008f2d5-linux-64bit.tar.gz
     ;;
   v3.7*)
-    OC_URL=https://github.com/openshift/origin/releases/download/v3.7.1/openshift-origin-client-tools-v3.7.1-ab0f056-linux-64bit.tar.gz
+    OC_URL=https://github.com/openshift/origin/releases/download/v3.7.2/openshift-origin-client-tools-v3.7.2-282e43f-linux-64bit.tar.gz
     ;;
   v3.8*|v3.9*)
     OC_URL=https://mirror.openshift.com/pub/openshift-v3/clients/${OPENSHIFT_GIT_VERSION#v}/linux/oc.tar.gz
