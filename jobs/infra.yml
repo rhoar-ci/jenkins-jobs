@@ -17,6 +17,8 @@
     wrappers:
     - timeout-10min
     builders:
+    - setup-oc:
+        openshift-cluster: local-ci-main
     - shell: |
         jjb test jobs
 
@@ -38,6 +40,8 @@
     wrappers:
     - timeout-10min
     builders:
+    - setup-oc:
+        openshift-cluster: local-ci-main
     - shell: |
         jjb update jobs
 
@@ -60,6 +64,8 @@
     wrappers:
     - timeout-10min
     builders:
+    - setup-oc:
+        openshift-cluster: local-ci-main
     - shell: |
         mvn clean verify
 
@@ -81,6 +87,8 @@
     wrappers:
     - timeout-10min
     builders:
+    - setup-oc:
+        openshift-cluster: local-ci-main
     - shell: |
         mvn clean fabric8:deploy
 
@@ -103,6 +111,8 @@
     wrappers:
     - timeout-10min
     builders:
+    - setup-oc:
+        openshift-cluster: local-ci-main
     - shell: |
         npm install
         npm run check
