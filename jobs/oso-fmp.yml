@@ -79,8 +79,8 @@
     name: oso-fmp-wfswarm-rest-http-secured
     github-org: wildfly-swarm-openshiftio-boosters
     github-repo: wfswarm-rest-http-secured
-    builder: booster-sso
-    ci-description: 'WildFly Swarm | 103: SSO'
+    builder: booster-secured
+    ci-description: 'WildFly Swarm | 103: Secured'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
@@ -176,8 +176,8 @@
     name: oso-fmp-vertx-secured-http-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-secured-http-booster
-    builder: booster-sso
-    ci-description: 'Vert.x | 103: SSO'
+    builder: booster-secured
+    ci-description: 'Vert.x | 103: Secured'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
@@ -273,8 +273,8 @@
     name: oso-fmp-spring-boot-http-secured-booster
     github-org: snowdrop
     github-repo: spring-boot-http-secured-booster
-    builder: booster-sso
-    ci-description: 'Spring Boot | 103: SSO'
+    builder: booster-secured
+    ci-description: 'Spring Boot | 103: Secured'
     ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:

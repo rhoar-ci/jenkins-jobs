@@ -93,10 +93,10 @@
         !include-raw: "scripts/fmp-booster-basic.sh"
 
 - builder:
-    name: fmp-booster-sso
+    name: fmp-booster-secured
     builders:
     - shell:
-        !include-raw: "scripts/fmp-booster-sso.sh"
+        !include-raw: "scripts/fmp-booster-secured.sh"
 
 - builder:
     name: s2i-booster-basic
