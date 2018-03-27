@@ -117,6 +117,21 @@
         openshift-cluster: starter-us-west-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
+- project:
+    name: oso-fmp-wfswarm-cache
+    github-org: wildfly-swarm-openshiftio-boosters
+    github-repo: wfswarm-cache
+    builder: booster-basic
+    ci-description: 'WildFly Swarm | 107: Cache'
+    jobs:
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-ca-central-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 
 - project:
     name: oso-fmp-vertx-http-booster
@@ -208,6 +223,21 @@
         openshift-cluster: starter-us-west-1
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
+- project:
+    name: oso-fmp-vertx-cache-booster
+    github-org: openshiftio-vertx-boosters
+    github-repo: vertx-cache-booster
+    builder: booster-basic
+    ci-description: 'Vert.x | 107: Cache'
+    jobs:
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-ca-central-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
 
 - project:
     name: oso-fmp-spring-boot-http-booster
@@ -290,6 +320,21 @@
     github-repo: spring-boot-circuit-breaker-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 106: Circuit Breaker'
+    jobs:
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-ca-central-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-east-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-1
+    - oso-{openshift-cluster}-fmp-{github-repo}:
+        openshift-cluster: starter-us-west-2
+- project:
+    name: oso-fmp-spring-boot-cache-booster
+    github-org: snowdrop
+    github-repo: spring-boot-cache-booster
+    builder: booster-basic
+    ci-description: 'Spring Boot | 107: Cache'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
