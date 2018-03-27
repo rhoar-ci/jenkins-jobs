@@ -142,6 +142,16 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+- project:
+    name: ci-fmp-wfswarm-cache
+    github-org: wildfly-swarm-openshiftio-boosters
+    github-repo: wfswarm-cache
+    builder: booster-basic
+    ci-description: 'WildFly Swarm | 107: Cache'
+    jobs:
+    - ci-pr-fmp-{github-repo}
+    - ci-master-fmp-{github-repo}
+    - ci-master-s2i-{github-repo}
 
 - project:
     name: ci-fmp-vertx-http-booster
@@ -202,6 +212,16 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+- project:
+    name: ci-fmp-vertx-cache-booster
+    github-org: openshiftio-vertx-boosters
+    github-repo: vertx-cache-booster
+    builder: booster-basic
+    ci-description: 'Vert.x | 107: Cache'
+    jobs:
+    - ci-pr-fmp-{github-repo}
+    - ci-master-fmp-{github-repo}
+    - ci-master-s2i-{github-repo}
 
 - project:
     name: ci-fmp-spring-boot-http-booster
@@ -258,6 +278,16 @@
     github-repo: spring-boot-circuit-breaker-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 106: Circuit Breaker'
+    jobs:
+    - ci-pr-fmp-{github-repo}
+    - ci-master-fmp-{github-repo}
+    - ci-master-s2i-{github-repo}
+- project:
+    name: ci-fmp-spring-boot-cache-booster
+    github-org: snowdrop
+    github-repo: spring-boot-cache-booster
+    builder: booster-basic
+    ci-description: 'Spring Boot | 107: Cache'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
