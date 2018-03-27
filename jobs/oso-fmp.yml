@@ -1,6 +1,6 @@
 - job-template:
     name: oso-{openshift-cluster}-fmp-{github-repo}
-    description: '{{"cluster": "{openshift-cluster}", "description": "{ci-description}", "type": "{ci-type}"}}'
+    description: '{{"cluster": "{openshift-cluster}", "description": "{ci-description}", "type": "Fabric8 Maven plugin"}}'
     project-type: freestyle
     node: maven
     properties:
@@ -33,7 +33,6 @@
     github-repo: wfswarm-rest-http
     builder: booster-basic
     ci-description: 'WildFly Swarm | 100: HTTP API'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -49,7 +48,6 @@
     github-repo: wfswarm-rest-http-crud
     builder: booster-basic
     ci-description: 'WildFly Swarm | 101: CRUD'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -65,7 +63,6 @@
     github-repo: wfswarm-configmap
     builder: booster-basic
     ci-description: 'WildFly Swarm | 102: ConfigMap'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -81,7 +78,6 @@
     github-repo: wfswarm-rest-http-secured
     builder: booster-secured
     ci-description: 'WildFly Swarm | 103: Secured'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -97,7 +93,6 @@
     github-repo: wfswarm-health-check
     builder: booster-basic
     ci-description: 'WildFly Swarm | 104: Health Check'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -113,7 +108,6 @@
     github-repo: wfswarm-circuit-breaker
     builder: booster-basic
     ci-description: 'WildFly Swarm | 106: Circuit Breaker'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -130,7 +124,6 @@
     github-repo: vertx-http-booster
     builder: booster-basic
     ci-description: 'Vert.x | 100: HTTP API'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -146,7 +139,6 @@
     github-repo: vertx-crud-booster
     builder: booster-basic
     ci-description: 'Vert.x | 101: CRUD'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -162,7 +154,6 @@
     github-repo: vertx-configmap-booster
     builder: booster-basic
     ci-description: 'Vert.x | 102: ConfigMap'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -178,7 +169,6 @@
     github-repo: vertx-secured-http-booster
     builder: booster-secured
     ci-description: 'Vert.x | 103: Secured'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -194,7 +184,6 @@
     github-repo: vertx-health-checks-booster
     builder: booster-basic
     ci-description: 'Vert.x | 104: Health Check'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -210,7 +199,6 @@
     github-repo: vertx-circuit-breaker-booster
     builder: booster-basic
     ci-description: 'Vert.x | 106: Circuit Breaker'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -227,7 +215,6 @@
     github-repo: spring-boot-http-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 100: HTTP API'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -243,7 +230,6 @@
     github-repo: spring-boot-crud-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 101: CRUD'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -259,7 +245,6 @@
     github-repo: spring-boot-configmap-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 102: ConfigMap'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -275,7 +260,6 @@
     github-repo: spring-boot-http-secured-booster
     builder: booster-secured
     ci-description: 'Spring Boot | 103: Secured'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -291,7 +275,6 @@
     github-repo: spring-boot-health-check-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 104: Health Check'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -307,7 +290,6 @@
     github-repo: spring-boot-circuit-breaker-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 106: Circuit Breaker'
-    ci-type: 'Fabric8 Maven plugin'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
