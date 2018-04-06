@@ -50,6 +50,20 @@
         org-list:
         - "{github-org}"
         allow-whitelist-orgs-as-admins: true
+        admin-list:
+        # I'm so special
+        - Ladicek
+        white-list:
+        # QE
+        - akoniar
+        - juangon
+        - liborfuka
+        - mocenas
+        - spisiakm
+        # docs
+        - inoxx03
+        - rhoads-zach
+        - tradej
         auth-id: rhoar-bot-github-token
         status-context: rhoar-bot
         status-url: "http://rourka.op.redhat.com/console-text/$JOB_BASE_NAME/$BUILD_NUMBER"
