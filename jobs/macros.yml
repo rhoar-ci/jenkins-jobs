@@ -64,6 +64,12 @@
         - inoxx03
         - rhoads-zach
         - tradej
+        # Launcher
+        - ALRubinger
+        - edewit
+        - gastaldi
+        - ia3andy
+        - quintesse
         auth-id: rhoar-bot-github-token
         status-context: rhoar-bot
         status-url: "http://rourka.op.redhat.com/console-text/$JOB_BASE_NAME/$BUILD_NUMBER"
