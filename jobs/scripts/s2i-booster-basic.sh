@@ -48,6 +48,20 @@ emulateLauncherDelete () {
   processYamlFilesOfAKind $action "resource"
 }
 
+
+
+# BEGIN workaround for https://github.com/openshift/origin/issues/8374
+cat << EOF > my-gitconfig
+[user]
+        name = Workaround
+        email = workaround@example.com
+EOF
+oc secrets new workaround .gitconfig=my-gitconfig
+oc annotate secret workaround 'build.openshift.io/source-secret-match-uri-1=*://*/*'
+# END workaround for https://github.com/openshift/origin/issues/8374
+
+
+
 emulateLauncherApply
 sleep 300 # if only there was a way to actually wait for the build and deployment to finish...
 
@@ -56,3 +70,9 @@ sleep 300 # if only there was a way to actually wait for the build and deploymen
 mvn clean verify -B -Popenshift-it -Denv.init.enabled=false       -Dnamespace.use.current=true -DenableImageStreamDetection=false
 
 emulateLauncherDelete
+
+
+
+# BEGIN workaround for https://github.com/openshift/origin/issues/8374
+oc delete secret workaround
+# END workaround for https://github.com/openshift/origin/issues/8374
