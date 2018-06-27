@@ -99,8 +99,8 @@
     properties:
     - keep-10-builds
     - github-url:
-        github-org: rhoar-ci
-        github-repo: e2e-tests
+        github-org: rhoar-qe
+        github-repo: boosters-e2e-tests
     scm:
     - github-pr:
         github-org: rhoar-ci
