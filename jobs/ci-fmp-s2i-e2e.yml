@@ -47,6 +47,8 @@
     wrappers:
     - timeout-1h
     builders:
+    - expose-booster-name:
+        booster-name: '{github-repo}'
     - setup-oc:
         openshift-cluster: local-ci-master
     - clean-project
@@ -75,11 +77,45 @@
     wrappers:
     - timeout-1h
     builders:
+    - expose-booster-name:
+        booster-name: '{github-repo}'
     - setup-oc:
         openshift-cluster: local-ci-master
     - clean-project
     - 's2i-{builder}'
     publishers:
+    - junit-archive
+    - workspace-cleanup
+- job-template:
+    name: ci-master-e2e-{github-repo}
+    description: '{{"cluster": "CI cluster", "description": "{ci-description}", "type": "E2E (UI tests)"}}'
+    project-type: freestyle
+    node: nodejs
+    properties:
+    - keep-10-builds
+    - github-url:
+        github-org: '{github-org}'
+        github-repo: '{github-repo}'
+    - build-block:
+        job-prefix: ci-master
+    scm:
+    - github:
+        github-org: '{github-org}'
+        github-repo: '{github-repo}'
+#    triggers:
+#    - github
+    wrappers:
+    - timeout-1h
+    builders:
+    - expose-booster-name:
+        booster-name: '{github-repo}'
+    - setup-oc:
+        openshift-cluster: local-ci-master
+    - clean-project
+    - 'e2e-{builder}'
+    publishers:
+    - archive:
+        artifacts: 'boosters-e2e-tests/target/**'
     - junit-archive
     - workspace-cleanup
 
@@ -93,6 +129,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-wfswarm-rest-http-crud
     github-org: wildfly-swarm-openshiftio-boosters
@@ -103,6 +140,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-wfswarm-configmap
     github-org: wildfly-swarm-openshiftio-boosters
@@ -113,6 +151,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-wfswarm-rest-http-secured
     github-org: wildfly-swarm-openshiftio-boosters
@@ -132,6 +171,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-wfswarm-circuit-breaker
     github-org: wildfly-swarm-openshiftio-boosters
@@ -142,6 +182,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-wfswarm-cache
     github-org: wildfly-swarm-openshiftio-boosters
@@ -152,6 +193,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 
 - project:
     name: ci-fmp-vertx-http-booster
@@ -163,6 +205,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-vertx-crud-booster
     github-org: openshiftio-vertx-boosters
@@ -173,6 +216,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-vertx-configmap-booster
     github-org: openshiftio-vertx-boosters
@@ -183,6 +227,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-vertx-secured-http-booster
     github-org: openshiftio-vertx-boosters
@@ -202,6 +247,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-vertx-circuit-breaker-booster
     github-org: openshiftio-vertx-boosters
@@ -212,6 +258,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-vertx-cache-booster
     github-org: openshiftio-vertx-boosters
@@ -222,6 +269,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 
 - project:
     name: ci-fmp-spring-boot-http-booster
@@ -233,6 +281,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-spring-boot-crud-booster
     github-org: snowdrop
@@ -243,6 +292,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-spring-boot-configmap-booster
     github-org: snowdrop
@@ -253,6 +303,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-spring-boot-http-secured-booster
     github-org: snowdrop
@@ -272,6 +323,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-spring-boot-circuit-breaker-booster
     github-org: snowdrop
@@ -282,6 +334,7 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
 - project:
     name: ci-fmp-spring-boot-cache-booster
     github-org: snowdrop
@@ -292,3 +345,4 @@
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}

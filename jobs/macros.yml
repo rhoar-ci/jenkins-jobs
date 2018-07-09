@@ -99,6 +99,13 @@
         properties-content: |
           PATH=$WORKSPACE/custom-bin:$PATH
 
+- builder:
+    name: expose-booster-name
+    builders:
+    - inject:
+        properties-content: |
+          BOOSTER_NAME={booster-name}
+
 # must not be used before `setup-oc`
 - builder:
     name: clean-project
@@ -122,7 +129,17 @@
     name: s2i-booster-basic
     builders:
     - shell:
-        !include-raw: "scripts/s2i-booster-basic.sh"
+        !include-raw:
+        - "scripts/s2i-functions.sh"
+        - "scripts/s2i-booster-basic.sh"
+
+- builder:
+    name: e2e-booster-basic
+    builders:
+    - shell:
+        !include-raw:
+        - "scripts/s2i-functions.sh"
+        - "scripts/e2e-booster-basic.sh"
 
 - publisher:
     name: junit-archive
