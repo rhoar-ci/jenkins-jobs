@@ -31,8 +31,7 @@ runEnd2EndTest () {
 
   echo "Running E2E tests for $runtime/$mission at $url"
 
-#  git clone https://github.com/rhoar-qe/boosters-e2e-tests.git
-  git clone -b stability-improvements https://github.com/Ladicek/rhoar-boosters-e2e-tests.git boosters-e2e-tests
+  git clone https://github.com/rhoar-qe/boosters-e2e-tests.git
   pushd boosters-e2e-tests
   npm install
   # we only need Chrome, and Gecko driver is hosted at GitHub, which often responds with "API rate limit exceeded"
