@@ -56,7 +56,7 @@ applyGitWorkaround () {
         email = workaround@example.com
 EOF
 
-  oc secrets new workaround .gitconfig=my-gitconfig
+  oc create secret generic workaround --from-file=.gitconfig=my-gitconfig
   oc annotate secret workaround 'build.openshift.io/source-secret-match-uri-1=*://*/*'
 }
 
