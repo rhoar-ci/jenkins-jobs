@@ -1,5 +1,5 @@
 - job-template:
-    name: oso-{openshift-cluster}-fmp-{github-repo}
+    name: oso-{openshift-cluster}-fmp-{job-name}
     description: '{{"cluster": "{openshift-cluster}", "description": "{ci-description}", "type": "Fabric8 Maven plugin"}}'
     project-type: freestyle
     node: maven
@@ -29,318 +29,339 @@
 
 - project:
     name: oso-thorntail-rest-http
+    job-name: thorntail-rest-http
     github-org: thorntail-examples
     github-repo: rest-http
     builder: booster-basic
     ci-description: 'Thorntail | 100: HTTP API'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-thorntail-rest-http-crud
+    job-name: thorntail-rest-http-crud
     github-org: thorntail-examples
     github-repo: rest-http-crud
     builder: booster-basic
     ci-description: 'Thorntail | 101: CRUD'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-thorntail-configmap
+    job-name: thorntail-configmap
     github-org: thorntail-examples
     github-repo: configmap
     builder: booster-basic
     ci-description: 'Thorntail | 102: ConfigMap'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-thorntail-rest-http-secured
+    job-name: thorntail-rest-http-secured
     github-org: thorntail-examples
     github-repo: rest-http-secured
     builder: booster-secured
     ci-description: 'Thorntail | 103: Secured'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-thorntail-health-check
+    job-name: thorntail-health-check
     github-org: thorntail-examples
     github-repo: health-check
     builder: booster-basic
     ci-description: 'Thorntail | 104: Health Check'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-thorntail-circuit-breaker
+    job-name: thorntail-circuit-breaker
     github-org: thorntail-examples
     github-repo: circuit-breaker
     builder: booster-basic
     ci-description: 'Thorntail | 106: Circuit Breaker'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-thorntail-cache
+    job-name: thorntail-cache
     github-org: thorntail-examples
     github-repo: cache
     builder: booster-basic
     ci-description: 'Thorntail | 107: Cache'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 
 - project:
     name: oso-vertx-http-booster
+    job-name: vertx-http-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-http-booster
     builder: booster-basic
     ci-description: 'Vert.x | 100: HTTP API'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-vertx-crud-booster
+    job-name: vertx-crud-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-crud-booster
     builder: booster-basic
     ci-description: 'Vert.x | 101: CRUD'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-vertx-configmap-booster
+    job-name: vertx-configmap-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-configmap-booster
     builder: booster-basic
     ci-description: 'Vert.x | 102: ConfigMap'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-vertx-secured-http-booster
+    job-name: vertx-secured-http-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-secured-http-booster
     builder: booster-secured
     ci-description: 'Vert.x | 103: Secured'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-vertx-health-checks-booster
+    job-name: vertx-health-checks-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-health-checks-booster
     builder: booster-basic
     ci-description: 'Vert.x | 104: Health Check'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-vertx-circuit-breaker-booster
+    job-name: vertx-circuit-breaker-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-circuit-breaker-booster
     builder: booster-basic
     ci-description: 'Vert.x | 106: Circuit Breaker'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-vertx-cache-booster
+    job-name: vertx-cache-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-cache-booster
     builder: booster-basic
     ci-description: 'Vert.x | 107: Cache'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 
 - project:
     name: oso-spring-boot-http-booster
+    job-name: spring-boot-http-booster
     github-org: snowdrop
     github-repo: spring-boot-http-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 100: HTTP API'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-spring-boot-crud-booster
+    job-name: spring-boot-crud-booster
     github-org: snowdrop
     github-repo: spring-boot-crud-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 101: CRUD'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-spring-boot-configmap-booster
+    job-name: spring-boot-configmap-booster
     github-org: snowdrop
     github-repo: spring-boot-configmap-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 102: ConfigMap'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-spring-boot-http-secured-booster
+    job-name: spring-boot-http-secured-booster
     github-org: snowdrop
     github-repo: spring-boot-http-secured-booster
     builder: booster-secured
     ci-description: 'Spring Boot | 103: Secured'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-spring-boot-health-check-booster
+    job-name: spring-boot-health-check-booster
     github-org: snowdrop
     github-repo: spring-boot-health-check-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 104: Health Check'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-spring-boot-circuit-breaker-booster
+    job-name: spring-boot-circuit-breaker-booster
     github-org: snowdrop
     github-repo: spring-boot-circuit-breaker-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 106: Circuit Breaker'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
 - project:
     name: oso-spring-boot-cache-booster
+    job-name: spring-boot-cache-booster
     github-org: snowdrop
     github-repo: spring-boot-cache-booster
     builder: booster-basic
     ci-description: 'Spring Boot | 107: Cache'
     jobs:
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-ca-central-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-east-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-1
-    - oso-{openshift-cluster}-fmp-{github-repo}:
+    - oso-{openshift-cluster}-fmp-{job-name}:
         openshift-cluster: starter-us-west-2
