@@ -28,7 +28,7 @@
     - workspace-cleanup
 
 - project:
-    name: oso-fmp-thorntail-rest-http
+    name: oso-thorntail-rest-http
     github-org: thorntail-examples
     github-repo: rest-http
     builder: booster-basic
@@ -43,7 +43,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-thorntail-rest-http-crud
+    name: oso-thorntail-rest-http-crud
     github-org: thorntail-examples
     github-repo: rest-http-crud
     builder: booster-basic
@@ -58,7 +58,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-thorntail-configmap
+    name: oso-thorntail-configmap
     github-org: thorntail-examples
     github-repo: configmap
     builder: booster-basic
@@ -73,7 +73,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-thorntail-rest-http-secured
+    name: oso-thorntail-rest-http-secured
     github-org: thorntail-examples
     github-repo: rest-http-secured
     builder: booster-secured
@@ -88,7 +88,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-thorntail-health-check
+    name: oso-thorntail-health-check
     github-org: thorntail-examples
     github-repo: health-check
     builder: booster-basic
@@ -103,7 +103,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-thorntail-circuit-breaker
+    name: oso-thorntail-circuit-breaker
     github-org: thorntail-examples
     github-repo: circuit-breaker
     builder: booster-basic
@@ -118,7 +118,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-thorntail-cache
+    name: oso-thorntail-cache
     github-org: thorntail-examples
     github-repo: cache
     builder: booster-basic
@@ -134,7 +134,7 @@
         openshift-cluster: starter-us-west-2
 
 - project:
-    name: oso-fmp-vertx-http-booster
+    name: oso-vertx-http-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-http-booster
     builder: booster-basic
@@ -149,7 +149,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-vertx-crud-booster
+    name: oso-vertx-crud-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-crud-booster
     builder: booster-basic
@@ -164,7 +164,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-vertx-configmap-booster
+    name: oso-vertx-configmap-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-configmap-booster
     builder: booster-basic
@@ -179,7 +179,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-vertx-secured-http-booster
+    name: oso-vertx-secured-http-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-secured-http-booster
     builder: booster-secured
@@ -194,7 +194,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-vertx-health-checks-booster
+    name: oso-vertx-health-checks-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-health-checks-booster
     builder: booster-basic
@@ -209,7 +209,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-vertx-circuit-breaker-booster
+    name: oso-vertx-circuit-breaker-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-circuit-breaker-booster
     builder: booster-basic
@@ -224,7 +224,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-vertx-cache-booster
+    name: oso-vertx-cache-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-cache-booster
     builder: booster-basic
@@ -240,7 +240,7 @@
         openshift-cluster: starter-us-west-2
 
 - project:
-    name: oso-fmp-spring-boot-http-booster
+    name: oso-spring-boot-http-booster
     github-org: snowdrop
     github-repo: spring-boot-http-booster
     builder: booster-basic
@@ -255,7 +255,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-spring-boot-crud-booster
+    name: oso-spring-boot-crud-booster
     github-org: snowdrop
     github-repo: spring-boot-crud-booster
     builder: booster-basic
@@ -270,7 +270,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-spring-boot-configmap-booster
+    name: oso-spring-boot-configmap-booster
     github-org: snowdrop
     github-repo: spring-boot-configmap-booster
     builder: booster-basic
@@ -285,7 +285,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-spring-boot-http-secured-booster
+    name: oso-spring-boot-http-secured-booster
     github-org: snowdrop
     github-repo: spring-boot-http-secured-booster
     builder: booster-secured
@@ -300,7 +300,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-spring-boot-health-check-booster
+    name: oso-spring-boot-health-check-booster
     github-org: snowdrop
     github-repo: spring-boot-health-check-booster
     builder: booster-basic
@@ -315,7 +315,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-spring-boot-circuit-breaker-booster
+    name: oso-spring-boot-circuit-breaker-booster
     github-org: snowdrop
     github-repo: spring-boot-circuit-breaker-booster
     builder: booster-basic
@@ -330,7 +330,7 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-spring-boot-cache-booster
+    name: oso-spring-boot-cache-booster
     github-org: snowdrop
     github-repo: spring-boot-cache-booster
     builder: booster-basic
