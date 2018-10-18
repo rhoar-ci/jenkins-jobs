@@ -48,7 +48,7 @@
     - timeout-1h
     builders:
     - expose-booster-name:
-        booster-name: '{github-repo}'
+        booster-name: '{github-org}-{github-repo}'
     - setup-oc:
         openshift-cluster: local-ci-master
     - clean-project
@@ -78,7 +78,7 @@
     - timeout-1h
     builders:
     - expose-booster-name:
-        booster-name: '{github-repo}'
+        booster-name: '{github-org}-{github-repo}'
     - setup-oc:
         openshift-cluster: local-ci-master
     - clean-project
@@ -108,7 +108,7 @@
     - timeout-1h
     builders:
     - expose-booster-name:
-        booster-name: '{github-repo}'
+        booster-name: '{github-org}-{github-repo}'
     - setup-oc:
         openshift-cluster: local-ci-master
     - clean-project
@@ -120,75 +120,75 @@
     - workspace-cleanup
 
 - project:
-    name: ci-fmp-wfswarm-rest-http
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-rest-http
+    name: ci-fmp-thorntail-rest-http
+    github-org: thorntail-examples
+    github-repo: rest-http
     builder: booster-basic
-    ci-description: 'WildFly Swarm | 100: HTTP API'
+    ci-description: 'Thorntail | 100: HTTP API'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
     - ci-master-e2e-{github-repo}
 - project:
-    name: ci-fmp-wfswarm-rest-http-crud
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-rest-http-crud
+    name: ci-fmp-thorntail-rest-http-crud
+    github-org: thorntail-examples
+    github-repo: rest-http-crud
     builder: booster-basic
-    ci-description: 'WildFly Swarm | 101: CRUD'
+    ci-description: 'Thorntail | 101: CRUD'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
     - ci-master-e2e-{github-repo}
 - project:
-    name: ci-fmp-wfswarm-configmap
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-configmap
+    name: ci-fmp-thorntail-configmap
+    github-org: thorntail-examples
+    github-repo: configmap
     builder: booster-basic
-    ci-description: 'WildFly Swarm | 102: ConfigMap'
+    ci-description: 'Thorntail | 102: ConfigMap'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
     - ci-master-e2e-{github-repo}
 - project:
-    name: ci-fmp-wfswarm-rest-http-secured
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-rest-http-secured
+    name: ci-fmp-thorntail-rest-http-secured
+    github-org: thorntail-examples
+    github-repo: rest-http-secured
     builder: booster-secured
-    ci-description: 'WildFly Swarm | 103: Secured'
+    ci-description: 'Thorntail | 103: Secured'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
 - project:
-    name: ci-fmp-wfswarm-health-check
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-health-check
+    name: ci-fmp-thorntail-health-check
+    github-org: thorntail-examples
+    github-repo: health-check
     builder: booster-basic
-    ci-description: 'WildFly Swarm | 104: Health Check'
-    jobs:
-    - ci-pr-fmp-{github-repo}
-    - ci-master-fmp-{github-repo}
-    - ci-master-s2i-{github-repo}
-    - ci-master-e2e-{github-repo}
-- project:
-    name: ci-fmp-wfswarm-circuit-breaker
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-circuit-breaker
-    builder: booster-basic
-    ci-description: 'WildFly Swarm | 106: Circuit Breaker'
+    ci-description: 'Thorntail | 104: Health Check'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}
     - ci-master-s2i-{github-repo}
     - ci-master-e2e-{github-repo}
 - project:
-    name: ci-fmp-wfswarm-cache
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-cache
+    name: ci-fmp-thorntail-circuit-breaker
+    github-org: thorntail-examples
+    github-repo: circuit-breaker
     builder: booster-basic
-    ci-description: 'WildFly Swarm | 107: Cache'
+    ci-description: 'Thorntail | 106: Circuit Breaker'
+    jobs:
+    - ci-pr-fmp-{github-repo}
+    - ci-master-fmp-{github-repo}
+    - ci-master-s2i-{github-repo}
+    - ci-master-e2e-{github-repo}
+- project:
+    name: ci-fmp-thorntail-cache
+    github-org: thorntail-examples
+    github-repo: cache
+    builder: booster-basic
+    ci-description: 'Thorntail | 107: Cache'
     jobs:
     - ci-pr-fmp-{github-repo}
     - ci-master-fmp-{github-repo}

@@ -28,11 +28,11 @@
     - workspace-cleanup
 
 - project:
-    name: oso-fmp-wfswarm-rest-http
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-rest-http
+    name: oso-fmp-thorntail-rest-http
+    github-org: thorntail-examples
+    github-repo: rest-http
     builder: booster-basic
-    ci-description: 'WildFly Swarm | 100: HTTP API'
+    ci-description: 'Thorntail | 100: HTTP API'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -43,11 +43,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-wfswarm-rest-http-crud
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-rest-http-crud
+    name: oso-fmp-thorntail-rest-http-crud
+    github-org: thorntail-examples
+    github-repo: rest-http-crud
     builder: booster-basic
-    ci-description: 'WildFly Swarm | 101: CRUD'
+    ci-description: 'Thorntail | 101: CRUD'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -58,11 +58,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-wfswarm-configmap
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-configmap
+    name: oso-fmp-thorntail-configmap
+    github-org: thorntail-examples
+    github-repo: configmap
     builder: booster-basic
-    ci-description: 'WildFly Swarm | 102: ConfigMap'
+    ci-description: 'Thorntail | 102: ConfigMap'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -73,11 +73,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-wfswarm-rest-http-secured
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-rest-http-secured
+    name: oso-fmp-thorntail-rest-http-secured
+    github-org: thorntail-examples
+    github-repo: rest-http-secured
     builder: booster-secured
-    ci-description: 'WildFly Swarm | 103: Secured'
+    ci-description: 'Thorntail | 103: Secured'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -88,11 +88,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-wfswarm-health-check
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-health-check
+    name: oso-fmp-thorntail-health-check
+    github-org: thorntail-examples
+    github-repo: health-check
     builder: booster-basic
-    ci-description: 'WildFly Swarm | 104: Health Check'
+    ci-description: 'Thorntail | 104: Health Check'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -103,11 +103,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-wfswarm-circuit-breaker
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-circuit-breaker
+    name: oso-fmp-thorntail-circuit-breaker
+    github-org: thorntail-examples
+    github-repo: circuit-breaker
     builder: booster-basic
-    ci-description: 'WildFly Swarm | 106: Circuit Breaker'
+    ci-description: 'Thorntail | 106: Circuit Breaker'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1
@@ -118,11 +118,11 @@
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-us-west-2
 - project:
-    name: oso-fmp-wfswarm-cache
-    github-org: wildfly-swarm-openshiftio-boosters
-    github-repo: wfswarm-cache
+    name: oso-fmp-thorntail-cache
+    github-org: thorntail-examples
+    github-repo: cache
     builder: booster-basic
-    ci-description: 'WildFly Swarm | 107: Cache'
+    ci-description: 'Thorntail | 107: Cache'
     jobs:
     - oso-{openshift-cluster}-fmp-{github-repo}:
         openshift-cluster: starter-ca-central-1

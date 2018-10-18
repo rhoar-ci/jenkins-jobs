@@ -8,7 +8,7 @@ runEnd2EndTest () {
 
   case "$BOOSTER_NAME" in
     *vertx*) runtime=vertx ;;
-    *wfswarm*) runtime=wfswarm ;;
+    *thorntail*) runtime=thorntail ;;
     *spring-boot*) runtime=springboot ;;
   esac
   case "$BOOSTER_NAME" in
