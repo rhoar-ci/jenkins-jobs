@@ -7,22 +7,6 @@
     view-type: list
     regex: "^ci-master-.*"
 - view:
-    name: oso-starter-ca-central-1
-    view-type: list
-    regex: "^oso-starter-ca-central-1-.*"
-- view:
-    name: oso-starter-us-east-1
-    view-type: list
-    regex: "^oso-starter-us-east-1-.*"
-- view:
-    name: oso-starter-us-west-1
-    view-type: list
-    regex: "^oso-starter-us-west-1-.*"
-- view:
-    name: oso-starter-us-west-2
-    view-type: list
-    regex: "^oso-starter-us-west-2-.*"
-- view:
     name: infra
     view-type: list
     regex: "^infra-.*"
