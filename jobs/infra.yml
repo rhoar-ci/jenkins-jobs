@@ -103,11 +103,11 @@
         github-repo: boosters-e2e-tests
     scm:
     - github-pr:
-        github-org: rhoar-ci
-        github-repo: e2e-tests
+        github-org: rhoar-qe
+        github-repo: boosters-e2e-tests
     triggers:
     - github-pr:
-        github-org: rhoar-ci
+        github-org: rhoar-qe
     wrappers:
     - timeout-10min
     builders:
