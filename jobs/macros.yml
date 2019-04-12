@@ -53,6 +53,7 @@
         admin-list:
         # I'm so special
         - Ladicek
+        - rhoar-bot
         white-list:
         # QE
         - akoniar
