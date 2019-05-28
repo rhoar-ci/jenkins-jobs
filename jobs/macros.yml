@@ -74,6 +74,7 @@
         - quintesse
         # automation
         - dependabot[bot]
+        - dependabot-preview[bot]
         auth-id: rhoar-bot-github-token
         status-context: rhoar-bot
         status-url: "http://rourka.op.redhat.com/console-text/$JOB_BASE_NAME/$BUILD_NUMBER"
