@@ -25,7 +25,7 @@ processYamlFilesOfAKind () {
   local action=$1
   local kind=$2
 
-  for yaml in $(find . -type f -regex "^.*/\.openshiftio/$kind\.\(\w+\.\)?ya?ml$") ; do
+  for yaml in $(find . -type f -regex "^.*/\.openshift\(io\)?/$kind\.\(\w+\.\)?ya?ml$") ; do
     processYamlFile $yaml $action
   done
 }
