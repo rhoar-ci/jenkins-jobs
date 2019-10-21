@@ -35,7 +35,7 @@ runEnd2EndTest () {
   pushd boosters-e2e-tests
   npm install
   # we only need Chrome, and Gecko driver is hosted at GitHub, which often responds with "API rate limit exceeded"
-  npx webdriver-manager update --gecko=false
+  npx webdriver-manager update --gecko=false --versions.chrome=$(google-chrome --version | cut -d ' ' -f 3)
   npm run test -- --suite=${mission} --params.url.${mission}=${url} --params.runtime=${runtime}
   popd
 }

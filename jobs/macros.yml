@@ -53,16 +53,18 @@
         admin-list:
         # I'm so special
         - Ladicek
+        # without this, GHPRB fails to add commit statuses
+        - rhoar-bot
         white-list:
         # QE
         - akoniar
         - juangon
         - liborfuka
         - mocenas
-        - spisiakm
+        - penehyba
         # docs
+        - huntley
         - inoxx03
-        - rhoads-zach
         - tradej
         # Launcher
         - ALRubinger
@@ -70,6 +72,9 @@
         - gastaldi
         - ia3andy
         - quintesse
+        # automation
+        - dependabot[bot]
+        - dependabot-preview[bot]
         auth-id: rhoar-bot-github-token
         status-context: rhoar-bot
         status-url: "http://rourka.op.redhat.com/console-text/$JOB_BASE_NAME/$BUILD_NUMBER"

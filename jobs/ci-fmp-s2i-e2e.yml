@@ -211,6 +211,18 @@
     - ci-master-fmp-{job-name}
     - ci-master-s2i-{job-name}
     - ci-master-e2e-{job-name}
+- project:
+    name: ci-thorntail-messaging-work-queue
+    job-name: thorntail-messaging-work-queue
+    github-org: thorntail-examples
+    github-repo: messaging-work-queue
+    builder: booster-basic
+    ci-description: 'Thorntail | 200: Messaging Work Queue'
+    jobs:
+    - ci-pr-fmp-{job-name}
+    - ci-master-fmp-{job-name}
+    - ci-master-s2i-{job-name}
+#    - ci-master-e2e-{job-name}
 
 - project:
     name: ci-vertx-http-booster
