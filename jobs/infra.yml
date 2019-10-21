@@ -35,6 +35,7 @@
     - github:
         github-org: rhoar-ci
         github-repo: jenkins-jobs
+        github-branch: master
     triggers:
     - github
     wrappers:
@@ -82,6 +83,7 @@
     - github:
         github-org: rhoar-ci
         github-repo: dashboard
+        github-branch: master
     triggers:
     - github
     wrappers:
