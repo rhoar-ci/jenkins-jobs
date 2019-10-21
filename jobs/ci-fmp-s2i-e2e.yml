@@ -216,6 +216,7 @@
     job-name: thorntail-messaging-work-queue
     github-org: thorntail-examples
     github-repo: messaging-work-queue
+    github-branch: master
     builder: booster-basic
     ci-description: 'Thorntail | 200: Messaging Work Queue'
     jobs:
