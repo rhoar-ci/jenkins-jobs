@@ -42,6 +42,7 @@
     - github:
         github-org: '{github-org}'
         github-repo: '{github-repo}'
+        github-branch: '{github-branch}'
     triggers:
     - github
     wrappers:
@@ -72,6 +73,7 @@
     - github:
         github-org: '{github-org}'
         github-repo: '{github-repo}'
+        github-branch: '{github-branch}'
     triggers:
     - github
     wrappers:
@@ -102,6 +104,7 @@
     - github:
         github-org: '{github-org}'
         github-repo: '{github-repo}'
+        github-branch: '{github-branch}'
     triggers:
     - github
     wrappers:
@@ -124,6 +127,7 @@
     job-name: thorntail-rest-http
     github-org: thorntail-examples
     github-repo: rest-http
+    github-branch: master
     builder: booster-basic
     ci-description: 'Thorntail | 100: HTTP API'
     jobs:
@@ -136,6 +140,7 @@
     job-name: thorntail-rest-http-crud
     github-org: thorntail-examples
     github-repo: rest-http-crud
+    github-branch: master
     builder: booster-basic
     ci-description: 'Thorntail | 101: CRUD'
     jobs:
@@ -148,6 +153,7 @@
     job-name: thorntail-configmap
     github-org: thorntail-examples
     github-repo: configmap
+    github-branch: master
     builder: booster-basic
     ci-description: 'Thorntail | 102: ConfigMap'
     jobs:
@@ -160,6 +166,7 @@
     job-name: thorntail-rest-http-secured
     github-org: thorntail-examples
     github-repo: rest-http-secured
+    github-branch: master
     builder: booster-secured
     ci-description: 'Thorntail | 103: Secured'
     jobs:
@@ -170,6 +177,7 @@
     job-name: thorntail-health-check
     github-org: thorntail-examples
     github-repo: health-check
+    github-branch: master
     builder: booster-basic
     ci-description: 'Thorntail | 104: Health Check'
     jobs:
@@ -182,6 +190,7 @@
     job-name: thorntail-circuit-breaker
     github-org: thorntail-examples
     github-repo: circuit-breaker
+    github-branch: master
     builder: booster-basic
     ci-description: 'Thorntail | 106: Circuit Breaker'
     jobs:
@@ -194,6 +203,7 @@
     job-name: thorntail-cache
     github-org: thorntail-examples
     github-repo: cache
+    github-branch: master
     builder: booster-basic
     ci-description: 'Thorntail | 107: Cache'
     jobs:
@@ -207,6 +217,7 @@
     job-name: vertx-http-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-http-booster
+    github-branch: master
     builder: booster-basic
     ci-description: 'Vert.x | 100: HTTP API'
     jobs:
@@ -219,6 +230,7 @@
     job-name: vertx-crud-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-crud-booster
+    github-branch: master
     builder: booster-basic
     ci-description: 'Vert.x | 101: CRUD'
     jobs:
@@ -231,6 +243,7 @@
     job-name: vertx-configmap-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-configmap-booster
+    github-branch: master
     builder: booster-basic
     ci-description: 'Vert.x | 102: ConfigMap'
     jobs:
@@ -243,6 +256,7 @@
     job-name: vertx-secured-http-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-secured-http-booster
+    github-branch: master
     builder: booster-secured
     ci-description: 'Vert.x | 103: Secured'
     jobs:
@@ -253,6 +267,7 @@
     job-name: vertx-health-checks-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-health-checks-booster
+    github-branch: master
     builder: booster-basic
     ci-description: 'Vert.x | 104: Health Check'
     jobs:
@@ -265,6 +280,7 @@
     job-name: vertx-circuit-breaker-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-circuit-breaker-booster
+    github-branch: master
     builder: booster-basic
     ci-description: 'Vert.x | 106: Circuit Breaker'
     jobs:
@@ -277,6 +293,7 @@
     job-name: vertx-cache-booster
     github-org: openshiftio-vertx-boosters
     github-repo: vertx-cache-booster
+    github-branch: master
     builder: booster-basic
     ci-description: 'Vert.x | 107: Cache'
     jobs:
@@ -289,7 +306,8 @@
     name: ci-spring-boot-http-booster
     job-name: spring-boot-http-booster
     github-org: snowdrop
-    github-repo: spring-boot-http-booster
+    github-repo: rest-http-example
+    github-branch: sb-2.1.x
     builder: booster-basic
     ci-description: 'Spring Boot | 100: HTTP API'
     jobs:
@@ -301,7 +319,8 @@
     name: ci-spring-boot-crud-booster
     job-name: spring-boot-crud-booster
     github-org: snowdrop
-    github-repo: spring-boot-crud-booster
+    github-repo: crud-example
+    github-branch: sb-2.1.x
     builder: booster-basic
     ci-description: 'Spring Boot | 101: CRUD'
     jobs:
@@ -313,7 +332,8 @@
     name: ci-spring-boot-configmap-booster
     job-name: spring-boot-configmap-booster
     github-org: snowdrop
-    github-repo: spring-boot-configmap-booster
+    github-repo: configmap-example
+    github-branch: sb-2.1.x
     builder: booster-basic
     ci-description: 'Spring Boot | 102: ConfigMap'
     jobs:
@@ -325,7 +345,8 @@
     name: ci-spring-boot-http-secured-booster
     job-name: spring-boot-http-secured-booster
     github-org: snowdrop
-    github-repo: spring-boot-http-secured-booster
+    github-repo: secured-example
+    github-branch: sb-2.1.x
     builder: booster-secured
     ci-description: 'Spring Boot | 103: Secured'
     jobs:
@@ -335,7 +356,8 @@
     name: ci-spring-boot-health-check-booster
     job-name: spring-boot-health-check-booster
     github-org: snowdrop
-    github-repo: spring-boot-health-check-booster
+    github-repo: health-check-example
+    github-branch: sb-2.1.x
     builder: booster-basic
     ci-description: 'Spring Boot | 104: Health Check'
     jobs:
@@ -347,7 +369,8 @@
     name: ci-spring-boot-circuit-breaker-booster
     job-name: spring-boot-circuit-breaker-booster
     github-org: snowdrop
-    github-repo: spring-boot-circuit-breaker-booster
+    github-repo: circuit-breaker-example
+    github-branch: sb-2.1.x
     builder: booster-basic
     ci-description: 'Spring Boot | 106: Circuit Breaker'
     jobs:
@@ -359,7 +382,8 @@
     name: ci-spring-boot-cache-booster
     job-name: spring-boot-cache-booster
     github-org: snowdrop
-    github-repo: spring-boot-cache-booster
+    github-repo: cache-example
+    github-branch: sb-2.1.x
     builder: booster-basic
     ci-description: 'Spring Boot | 107: Cache'
     jobs:
