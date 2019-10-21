@@ -38,7 +38,7 @@
     - git:
         url: "https://github.com/{github-org}/{github-repo}.git"
         branches:
-        - "{github-branch}"
+        - "{github-branch|master}"
         skip-tag: true
         wipe-workspace: true
 
